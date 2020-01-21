@@ -6,7 +6,6 @@ module.exports = {
         sidebar: [
             '/',
             'accordion',
-            'accordion',
             'webpack',
             'visibility',
             'video',
