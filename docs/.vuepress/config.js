@@ -111,4 +111,12 @@ module.exports = {
             md.use(markup)
         }
     },
+    plugins: [
+        [
+            '@vuepress/google-analytics',
+            {
+                'ga': 'UA-156607732-1' // UA-00000000-0
+            }
+        ]
+    ]
 }
