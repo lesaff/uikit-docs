@@ -3,6 +3,12 @@ module.exports = {
     description: 'Searchable UIkit documentation',
     themeConfig: {
         logo: '/images/uikit-logo-black.svg',
+        // sidebar: 'auto',
+        codeLanguages: {
+            php: 'PHP',
+            twig: 'Twig',
+            // any other code language labels you want to include in code toggles...
+        },
         sidebar: [
             '/',
             'accordion',
@@ -95,5 +101,14 @@ module.exports = {
             'align',
             'animation',
         ]
+    },
+    markdown: {
+        anchor: {
+            level: [2, 3]
+        },
+        config(md) {
+            let markup = require('vuepress-theme-craftdocs/markup')
+            md.use(markup)
+        }
     },
 }
