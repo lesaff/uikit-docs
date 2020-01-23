@@ -15,6 +15,15 @@ module.exports = {
             twig: 'Twig',
             // any other code language labels you want to include in code toggles...
         },
+        nav: [{
+                text: 'Home',
+                link: '/'
+            },
+            {
+                text: 'Official UIkit Docs',
+                link: 'https://getuikit.com/docs/introduction'
+            }
+        ],
         sidebar: [
             {
                 title: 'Getting Started',
