@@ -22,6 +22,9 @@ module.exports = {
             {
                 text: 'Official UIkit Docs',
                 link: 'https://getuikit.com/docs/introduction'
+            }, {
+                text: 'Github',
+                link: 'https://github.com/lesaff/uikit-docs'
             }
         ],
         sidebar: [
