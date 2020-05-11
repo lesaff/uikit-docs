@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'UIkit 3.x Documentation (as of v3.3.0)',
+    title: 'UIkit 3.x Documentation (as of v3.4.5)',
     description: 'Searchable UIkit documentation',
     head: [
         ['link', {

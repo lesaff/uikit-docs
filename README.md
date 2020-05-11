@@ -1,8 +1,8 @@
 # Searchable UIkit 3.x Documentation
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/53130a1d-55b2-4154-bdb8-3a01cb2c79db/deploy-status)](https://app.netlify.com/sites/uikitdocs/deploys) [![UIkit v3.3.1](https://img.shields.io/badge/UIkit-v3.3.1-blue)](https://getuikit.com/docs/introduction)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/53130a1d-55b2-4154-bdb8-3a01cb2c79db/deploy-status)](https://app.netlify.com/sites/uikitdocs/deploys) [![UIkit v3.4.5](https://img.shields.io/badge/UIkit-v3.4.5-blue)](https://getuikit.com/docs/introduction)
 
-This is a searchable, alternative documentation for UIkit 3.x. It is based on UIkit v3.3.1.
+This is a searchable, alternative documentation for UIkit 3.x. It is based on UIkit v3.4.5.
 
 ## Installation
 - Clone it from Github
