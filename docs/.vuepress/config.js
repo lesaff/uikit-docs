@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'UIkit 3.x Documentation (as of v3.4.6)',
+    title: 'UIkit 3.x Documentation (as of v3.5.7)',
     description: 'Searchable UIkit documentation',
     head: [
         ['link', {
@@ -12,7 +12,9 @@ module.exports = {
         // sidebar: 'auto',
         codeLanguages: {
             php: 'PHP',
-            twig: 'Twig',
+            css: 'CSS',
+            html: 'HTML',
+            javascript: 'Javascript'
             // any other code language labels you want to include in code toggles...
         },
         nav: [{

@@ -4,6 +4,17 @@
 
 ***
 
+## Migration from UIkit 3.4 to 3.5
+ 
+In UIkit 3.5 all Less variables and class names which have `xxlarge` in their name got renamed to `2xlarge` for better consistency. Just find and replace these Less variables if you are using a custom Less theme. There is just one class in the [Width component](width) which has to be updated in your markup.
+
+| Class              | Replace with       |
+| ------------------ | ------------------ |
+| `uk-width-xxlarge` | `uk-width-2xlarge` |
+
+
+***
+
 ## Migration from UIkit 3.2 to 3.3
 
 UIkit 3.3 adds a new `uk-container-xlarge` class to the [Container component](container) with a width of `1600px` as default value. This is why the class `uk-container-large` changes its width from `1600px` to `1400px`. Update your markup by replacing the following classes.
@@ -12,6 +23,7 @@ UIkit 3.3 adds a new `uk-container-xlarge` class to the [Container component](co
 | -------------------- | --------------------- |
 | `uk-container-large` | `uk-container-xlarge` |
 
+***
 
 ## Migration from UIkit 3.1 to 3.2
 
