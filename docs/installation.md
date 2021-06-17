@@ -21,7 +21,7 @@ The compiled files of all UIkit versions are also hosted on the jsDelivr content
 <script src="https://cdn.jsdelivr.net/npm/uikit@[uikit-version]/dist/js/uikit-icons.min.js"></script>
 ```
 
-**Note** The latest [Subresource Integrity (SRI)](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) hashes can be obtained through [CDNJS](https://cdnjs.com/libraries/uikit/).
+**Note** The latest [Subresource Integrity (SRI)](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) hashes can be obtained through [jsDelivr](https://www.jsdelivr.com/package/npm/uikit).
 
 ***
 
@@ -51,8 +51,6 @@ yarn compile
 # Watch files and compile automatically everytime a file changes
 yarn watch
 ```
-
-**Note** Use Node.js version 8.2.0 or higher.
 
 The compiled `dist` folder now contains additional files which are not checked in by default. The build task will create even more additional files if you have added a [custom UIkit theme](less.md#use-included-build-process).
 

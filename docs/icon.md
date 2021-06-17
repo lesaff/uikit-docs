@@ -244,6 +244,7 @@ Here is an overview of all currently available icons. Over time, we will keep ad
         <ul class="uk-list">
             <li><span class="uk-margin-small-right" uk-icon="500px"></span> 500px</li>
             <li><span class="uk-margin-small-right" uk-icon="behance"></span> behance</li>
+            <li><span class="uk-margin-small-right" uk-icon="discord"></span> discord</li>
             <li><span class="uk-margin-small-right" uk-icon="dribbble"></span> dribbble</li>
             <li><span class="uk-margin-small-right" uk-icon="etsy"></span> etsy</li>
             <li><span class="uk-margin-small-right" uk-icon="facebook"></span> facebook</li>
@@ -257,7 +258,6 @@ Here is an overview of all currently available icons. Over time, we will keep ad
     <div>
         <ul class="uk-list">
             <li><span class="uk-margin-small-right" uk-icon="google"></span> google</li>
-            <li><span class="uk-margin-small-right" uk-icon="google-plus"></span> google-plus</li>
             <li><span class="uk-margin-small-right" uk-icon="instagram"></span> instagram</li>
             <li><span class="uk-margin-small-right" uk-icon="joomla"></span> joomla</li>
             <li><span class="uk-margin-small-right" uk-icon="linkedin"></span> linkedin</li>
@@ -265,12 +265,14 @@ Here is an overview of all currently available icons. Over time, we will keep ad
             <li><span class="uk-margin-small-right" uk-icon="pinterest"></span> pinterest</li>
             <li><span class="uk-margin-small-right" uk-icon="reddit"></span> reddit</li>
             <li><span class="uk-margin-small-right" uk-icon="soundcloud"></span> soundcloud</li>
+            <li><span class="uk-margin-small-right" uk-icon="tiktok"></span> tiktok</li>
             <li><span class="uk-margin-small-right" uk-icon="tripadvisor"></span> tripadvisor</li>
         </ul>
     </div>
     <div>
         <ul class="uk-list">
             <li><span class="uk-margin-small-right" uk-icon="tumblr"></span> tumblr</li>
+            <li><span class="uk-margin-small-right" uk-icon="twitch"></span> twitch</li>
             <li><span class="uk-margin-small-right" uk-icon="twitter"></span> twitter</li>
             <li><span class="uk-margin-small-right" uk-icon="uikit"></span> uikit</li>
             <li><span class="uk-margin-small-right" uk-icon="vimeo"></span> vimeo</li>
@@ -327,7 +329,7 @@ Use the modifier `.uk-icon-button` class on an `<a>` element to create an icon b
 ```example
 <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
 <a href="" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
-<a href="" class="uk-icon-button" uk-icon="google-plus"></a>
+<a href="" class="uk-icon-button" uk-icon="youtube"></a>
 ```
 
 ***
