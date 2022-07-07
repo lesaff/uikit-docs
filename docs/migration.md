@@ -4,8 +4,120 @@
 
 ***
 
+## Migration from UIkit 3.14 to 3.15
+
+The [Nav component](nav) component in UIkit 3.15 now uses a JavaScript component to create the parent icon for a nav item instead of compiling the parent icon into the CSS. Just search for the `.uk-nav-parent-icon` class and remove it from the markup. Simply use a `span` with the `uk-nav-parent-icon"` attribute for each nav item with children instead. Here is a quick example.
+
+```
+<ul class="uk-nav-default" uk-nav>
+    <li class="uk-parent">
+        <a href="#">Parent <span uk-nav-parent-icon></span></a>
+        <ul class="uk-nav-sub">
+            <li><a href="#">Sub item</a></li>
+            <li><a href="#">Sub item</a> </li>
+        </ul>
+    </li>
+</ul>
+```
+
+### Drop, Dropdown and Navbar Dropdown
+
+The [Drop component](drop), [Dropdown component](dropdown) and [Navbar component](navbar) components remove alignment `*-justify` from the `pos` option. Search for `pos: top-justify`, `pos: bottom-justify`, `pos: left-justify` and `pos: right-justify` and use the new  `stretch` option instead.
+
+| Option                | Replace with                   |
+| --------------------- | ------------------------------ |
+| `pos: top-justify`    | `pos: top-left; stretch: x`    |
+| `pos: bottom-justify` | `pos: bottom-left; stretch: x` |
+| `pos: left-justify`   | `pos: left-top; stretch: y`    |
+| `pos: right-justify`  | `pos: right-top; stretch: y`   |
+
+The `boundary-align` option is also removed. Search for `boundary: SELECTOR` in combination with `boundary-align: true` and use the new `target` option with the same selector from `boundary` instead.
+
+| Option                                     | Replace with       |
+| ------------------------------------------ | ------------------ |
+| `boundary: SELECTOR; boundary-align: true` | `target: SELECTOR` |
+
+The `flip` option is split into two options `flip` and `shift`. Update the options as follow.
+
+| Option        | Replace with                |
+| ------------- | --------------------------- |
+| `flip: false` | `flip: false; shift: false` |
+
+If the Position is `top-*` or `bottom-*`:
+
+| Option    | Replace with   |
+| --------- | -------------- |
+| `flip: x` | `flip: false`  |
+| `flip: y` | `shift: false` |
+
+If the Position is `left-*` or `right-*`:
+
+| Option    | Replace with   |
+| --------- | -------------- |
+| `flip: x` | `shift: false` |
+| `flip: y` | `flip: false`  |
+
+### Navbar Dropbar
+
+We removed the style from the dropbar in the Navbar component and now use the new Dropbar component instead. This is why the Navbar component sets `.uk-dropbar` and `.uk-dropbar-top` in addition to the `.uk-navbar-dropbar` class. If you placed the dropbar markup manually, you need to add those classes yourself. 
+
+In Less we have removed the `@navbar-dropbar-background` variable, so to set a background, use the `@dropbar-background` variable instead. Make sure to add any further style you applied to the navbar dropbar as well. 
+
+### Less Variables
+
+The following Less variables are also renamed. Just find and replace these Less variables if you are using a custom Less theme.
+
+| Less variable                            | Replace with                              |
+| ---------------------------------------- | ----------------------------------------- |
+| `@offcanvas-bar-width-m`                 | `@offcanvas-bar-width-s`                  |
+| `@offcanvas-bar-padding-vertical-m`      | `@offcanvas-bar-padding-vertical-s`       |
+| `@offcanvas-bar-padding-horizontal-m`    | `@offcanvas-bar-padding-horizontal-s`     |
+| `@nav-primary-item-font-size`            | `@nav-primary-font-size`                  |
+| `@nav-primary-item-line-height`          | `@nav-primary-line-height`                |
+| `@navbar-dropdown-dropbar-margin-top`    | `@navbar-dropdown-dropbar-padding-top`    |
+| `@navbar-dropdown-dropbar-margin-bottom` | `@navbar-dropdown-dropbar-padding-bottom` |
+
+***
+
+## Migration from UIkit 3.13 to 3.14
+
+UIkit 3.14 renames the `top` and `bottom` options to `start` and `end` in the [Sticky component](sticky). 
+
+| Option   | Replace with |
+| -------- | ------------ |
+| `top`    | `start`      |
+| `bottom` | `end`        |
+
+It also deprecates the `position: auto` option from the [Sticky component](sticky). Simply use the new `overflow-flip: true` options instead.
+
+| Option           | Replace with          |
+| ---------------- | --------------------- |
+| `position: auto` | `overflow-flip: true` |
+
+## Migration from UIkit 3.11 to 3.12
+
+UIkit 3.12 deprecates `uk-img` from the [Image component](image) for the `<img>` element. Simply use the native `loading="lazy"` attribute instead. This also applies if `uk-img` is used to target adjacent slides within Slideshows or Sliders. Both components, Slideshow and Slider, work with lazy loading images out of the box.
+
+| Attribute | Replace with     |
+| --------- | ---------------- |
+| `uk-img`  | `loading="lazy"` |
+
+**Important** This change also requires `<img>` elements to have `width` and `height` attributes to prevent layout shifts.
+
+## Migration from UIkit 3.10 to 3.11
+
+UIkit 3.11 adds new `start` and `end` options to the [Parallax component](parallax) and deprecates the `viewport` option. Replace the `viewport` option with the `end` option. Simply calculate `1` minus your viewport value and multiply it by `100vh + 100%`. Here are some examples:
+
+| Viewport Value | End Value    |
+| -------------- | ------------ |
+| `0.6`          | `40vh + 40%` |
+| `0.5`          | `50vh + 50%` |
+| `0.3`          | `70vh + 70%` |
+
+***
+
 ## Migration from UIkit 3.4 to 3.5
- 
+
 In UIkit 3.5 all Less variables and class names which have `xxlarge` in their name got renamed to `2xlarge` for better consistency. Just find and replace these Less variables if you are using a custom Less theme. There is just one class in the [Width component](width) which has to be updated in your markup.
 
 | Class              | Replace with       |
@@ -35,7 +147,7 @@ Since UIkit 3.2 adds a new `uk-text-bolder` class to the [Text component](text),
 
 ## Migration from UIkit 3.0 to 3.1
 
-UIkit 3.1 adds the `@deprecated` Less variable. By default, it is set to `false`, and deprecated classes are not compiled into the CSS. 
+UIkit 3.1 adds the `@deprecated` Less variable. By default, it is set to `false`, and deprecated classes are not compiled into the CSS.
 
 If you want to update your markup later and use the deprecated classes along the new ones, set the variable to `true` in your custom UIkit theme.
 
@@ -88,7 +200,7 @@ To start the migration, replace the UIkit 2 files of your website with their UIk
 
 ![Console output](images/migration-console.gif)
 
-Every notice or warning message tells you what to change, including a list of all affected HTML elements. More complex changes are explained with examples that are easy to follow. The best way to migrate is to fix one component after another. That way you can see if the error messages are gone after a reload and also see the changes on your site.
+Every notice or warning message tells you what to change, including a list of all affected HTML elements. More complex changes are explained with examples that are easy to follow. The best way to migrate is to fix one component after another. That way you can see if the error messages are gone after a page reload and also see the changes on your site.
 
 ### Warnings
 

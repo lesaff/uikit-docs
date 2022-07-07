@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'UIkit 3.x Documentation (as of v3.6.22)',
+    title: 'UIkit 3.x Documentation (as of v3.14.3)',
     description: 'Searchable UIkit documentation',
     head: [
         ['link', {
@@ -69,6 +69,7 @@ module.exports = {
                     'divider',
                     'dotnav',
                     'drop',
+                    'dropbar',
                     'dropdown',
                     'filter',
                     'flex',
@@ -79,6 +80,8 @@ module.exports = {
                     'icon',
                     'iconnav',
                     'image',
+                    'installation',
+                    'installation',
                     'inverse',
                     'label',
                     'leader',

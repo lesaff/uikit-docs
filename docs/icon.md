@@ -61,6 +61,7 @@ Here is an overview of all currently available icons. Over time, we will keep ad
             <li><span class="uk-margin-small-right" uk-icon="hashtag"></span> hashtag</li>
             <li><span class="uk-margin-small-right" uk-icon="tag"></span> tag</li>
             <li><span class="uk-margin-small-right" uk-icon="cart"></span> cart</li>
+            <li><span class="uk-margin-small-right" uk-icon="bag"></span> bag</li>
             <li><span class="uk-margin-small-right" uk-icon="credit-card"></span> credit-card</li>
             <li><span class="uk-margin-small-right" uk-icon="mail"></span> mail</li>
             <li><span class="uk-margin-small-right" uk-icon="receiver"></span> receiver</li>
@@ -289,7 +290,7 @@ Here is an overview of all currently available icons. Over time, we will keep ad
 
 ## Ratio
 
-Add the `ratio: 2` parameter to the `uk-icon` attribute to double its size – or any other number, depending on how big you want you icon to be.
+Add the `ratio: 2` parameter to the `uk-icon` attribute to double its size – or any other number, depending on how big you want your icon to be.
 
 ```html
 <span uk-icon="icon: check; ratio: 2"></span>

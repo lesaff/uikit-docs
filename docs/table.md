@@ -450,12 +450,12 @@ To modify the column width or content, you can use one of the following classes.
 
 To optimize the display of table cells and their specific content, you can add one of the following classes.
 
-| Class                 | Description                                                      |
-|-----------------------|------------------------------------------------------------------|
-| `.uk-table-link`      | To link an entire cell, add this class to a `<th>`or `<td>` element and insert an `<a>`element. Add the `.uk-link-reset`class from the [Link component](link.md) to reset the default link styling. |
+| Class                 | Description                                                                                                                                                                                                                                                                      |
+|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `.uk-table-link`      | To link an entire cell, add this class to a `<th>`or `<td>` element and insert an `<a>`element. Add the `.uk-link-reset`class from the [Link component](link.md) to reset the default link styling.                                                                              |
 | `.uk-preserve-width ` | Since images are responsive by default in UIkit, using an image inside a table cell with the `.uk-table-shrink` class would reduce the image width to 0. To prevent this behavior, add the `.uk-preserve-width` class from the [Base component](base.md) to the `<img>` element. |
-| `.uk-text-truncate`   | When applying a fixed width to a table cell, you might want to add this class from the [Text component](text.md) to the `<td>` element to truncate the text. |
-| `.uk-text-nowrap`     | Add this class from the [Text component](text.md) to keep text from wrapping, for example when using the `.uk-table-shrink` class. |
+| `.uk-text-truncate`   | When applying a fixed width to a table cell, you might want to add this class from the [Text component](text.md) to the `<td>` element to truncate the text.                                                                                                                     |
+| `.uk-text-nowrap`     | Add this class from the [Text component](text.md) to keep text from wrapping, for example when using the `.uk-table-shrink` class.                                                                                                                                               |
 
 ```html
 <!-- Table link -->
@@ -465,7 +465,7 @@ To optimize the display of table cells and their specific content, you can add o
 
 <!-- Preserve width -->
 <td>
-    <img class="uk-preserve-width">
+    <img class="uk-preserve-width" src="" width="" height="" alt="">
 </td>
 
 <!-- Text truncate -->
@@ -490,7 +490,7 @@ To optimize the display of table cells and their specific content, you can add o
         <tbody>
             <tr>
                 <td><input class="uk-checkbox" type="checkbox"></td>
-                <td><img class="uk-preserve-width uk-border-circle" src="images/avatar.jpg" width="40" alt=""></td>
+                <td><img class="uk-preserve-width uk-border-circle" src="images/avatar.jpg" width="40" height="40" alt=""></td>
                 <td class="uk-table-link">
                     <a class="uk-link-reset" href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</a>
                 </td>
@@ -499,7 +499,7 @@ To optimize the display of table cells and their specific content, you can add o
             </tr>
             <tr>
                 <td><input class="uk-checkbox" type="checkbox"></td>
-                <td><img class="uk-preserve-width uk-border-circle" src="images/avatar.jpg" width="40" alt=""></td>
+                <td><img class="uk-preserve-width uk-border-circle" src="images/avatar.jpg" width="40" height="40" alt=""></td>
                 <td class="uk-table-link">
                     <a class="uk-link-reset" href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</a>
                 </td>
@@ -508,7 +508,7 @@ To optimize the display of table cells and their specific content, you can add o
             </tr>
             <tr>
                 <td><input class="uk-checkbox" type="checkbox"></td>
-                <td><img class="uk-preserve-width uk-border-circle" src="images/avatar.jpg" width="40" alt=""></td>
+                <td><img class="uk-preserve-width uk-border-circle" src="images/avatar.jpg" width="40" height="40" alt=""></td>
                 <td class="uk-table-link">
                     <a class="uk-link-reset" href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</a>
                 </td>
@@ -517,7 +517,7 @@ To optimize the display of table cells and their specific content, you can add o
             </tr>
             <tr>
                 <td><input class="uk-checkbox" type="checkbox"></td>
-                <td><img class="uk-preserve-width uk-border-circle" src="images/avatar.jpg" width="40" alt=""></td>
+                <td><img class="uk-preserve-width uk-border-circle" src="images/avatar.jpg" width="40" height="40" alt=""></td>
                 <td class="uk-table-link">
                     <a class="uk-link-reset" href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</a>
                 </td>
