@@ -12,10 +12,7 @@ The [Nav component](nav) component in UIkit 3.15 now uses a JavaScript component
 <ul class="uk-nav-default" uk-nav>
     <li class="uk-parent">
         <a href="#">Parent <span uk-nav-parent-icon></span></a>
-        <ul class="uk-nav-sub">
-            <li><a href="#">Sub item</a></li>
-            <li><a href="#">Sub item</a> </li>
-        </ul>
+        <ul class="uk-nav-sub">…</ul>
     </li>
 </ul>
 ```
@@ -56,6 +53,13 @@ If the Position is `left-*` or `right-*`:
 | --------- | -------------- |
 | `flip: x` | `shift: false` |
 | `flip: y` | `flip: false`  |
+
+The `display` option is removed. Use `auto-update` instead.
+
+| Option             | Replace with         |
+|--------------------|----------------------|
+| `display: static`  | `auto-update: false` |
+| `display: dynamic` | `auto-update: true`  |
 
 ### Navbar Dropbar
 

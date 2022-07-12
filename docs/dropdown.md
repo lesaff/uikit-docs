@@ -41,7 +41,7 @@ A dropdown can contain a nav from the [Nav component](nav.md). Just add the `.uk
 ```html
 <button type="button"></button>
 <div uk-dropdown>
-    <ul class="uk-nav uk-dropdown-nav">...</ul>
+    <ul class="uk-nav uk-dropdown-nav">…</ul>
 </div>
 ```
 
@@ -68,7 +68,7 @@ You can place a grid from the [Grid component](grid.md) inside a dropdown. Just 
 
 ```html
 <div class="uk-width-large" uk-dropdown>
-    <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>...</div>
+    <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>…</div>
 </div>
 ```
 
@@ -293,12 +293,12 @@ To disable automatic shifting and flipping, add the `shift: false` or `flip: fal
 
 ***
 
-## Display
+## Auto Update
 
-By default, the dropdown repositions on scrolling. To disable dynamic positioning, add `display: static` option to the `uk-dropdown` attribute. The dropdown will only be positioned once when opened.
+By default, the drop repositions on scrolling. To disable dynamic positioning, add `auto-update: false` option to the `uk-dropdown` attribute. The dropdown will only be positioned once when opened.
 
 ```html
-<div uk-dropdown="display: static"></div>
+<div uk-dropdown="auto-update: false"></div>
 ```
 
 ***
@@ -392,7 +392,7 @@ By default, the dropdown is positioned outside the toggle. To change the positio
 
 ## Stretch
 
-To stretch the dropdown to fill the size of the viewport, add the `stretch: true` option to the `uk-dropdown` attribute. To only stretch to one axis, use `stretch: x` or `stretch: y`. If the `boundary` option is set, the dropdown stretches to the defined boundary.
+To stretch the dropdown to fill the size of its closest scrolling ancestor, add the `stretch: true` option to the `uk-dropdown` attribute. To only stretch to one axis, use `stretch: x` or `stretch: y`. If the `boundary` option is set, the dropdown stretches to the defined boundary.
 
 ```html
 <div uk-dropdown="stretch: true"></div>
@@ -404,17 +404,17 @@ To stretch the dropdown to fill the size of the viewport, add the `stretch: true
 
         <ul class="uk-navbar-nav">
             <li>
-                <a href="#">Stretch to Navbar</a>
+                <a href="#">Hover</a>
                 <div class="uk-navbar-dropdown" uk-dropdown="boundary: !.uk-navbar; stretch: x; flip: false">
                     <ul class="uk-nav uk-dropdown-nav">
-            <li class="uk-active"><a href="#">Active</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-nav-header">Header</li>
-            <li><a href="#">Item</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-nav-divider"></li>
-            <li><a href="#">Item</a></li>
-        </ul>
+                        <li class="uk-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li class="uk-nav-header">Header</li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li class="uk-nav-divider"></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
                 </div>
             </li>
         </ul>
@@ -437,18 +437,18 @@ Apply one or more animations to the dropdown by adding the `animation: uk-animat
 <button class="uk-button uk-button-default" type="button">Hover</button>
 <div uk-dropdown="animation: uk-animation-slide-top-small; animate-out: true">
     <ul class="uk-nav uk-dropdown-nav">
-            <li class="uk-active"><a href="#">Active</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-nav-header">Header</li>
-            <li><a href="#">Item</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-nav-divider"></li>
-            <li><a href="#">Item</a></li>
-        </ul>
+        <li class="uk-active"><a href="#">Active</a></li>
+        <li><a href="#">Item</a></li>
+        <li class="uk-nav-header">Header</li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li class="uk-nav-divider"></li>
+        <li><a href="#">Item</a></li>
+    </ul>
 </div>
 ```
 
-Alternatively, the Drop component has two additional animation types which are not covered by the Animation component. `slide-*` animations slide the dropdown and its content from a selected direction, while in the `reveal-*` animations, the content of the dropdown stays static and is revealed from a selected direction.
+Alternatively, the Drop component has two additional animation types which are not covered by the Animation component. `slide-*` animations slide the dropdown and its content from a selected direction, while with the `reveal-*` animations, the content of the dropdown stays static and is revealed from a selected direction.
 
 | Animation       | Description                           |
 | :-------------- | :------------------------------------ |
@@ -470,61 +470,61 @@ Alternatively, the Drop component has two additional animation types which are n
 
     <div class="uk-inline">
         <button class="uk-button uk-button-default" type="button">Slide Top</button>
-        <div uk-dropdown="animation: slide-top; animate-out: true">
+        <div uk-dropdown="animation: slide-top; animate-out: true; duration: 700">
             <ul class="uk-nav uk-dropdown-nav">
-            <li class="uk-active"><a href="#">Active</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-nav-header">Header</li>
-            <li><a href="#">Item</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-nav-divider"></li>
-            <li><a href="#">Item</a></li>
-        </ul>
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
         </div>
     </div>
 
     <div class="uk-inline">
         <button class="uk-button uk-button-default" type="button">Reveal Top</button>
-        <div uk-dropdown="animation: reveal-top; animate-out: true">
+        <div uk-dropdown="animation: reveal-top; animate-out: true; duration: 700">
             <ul class="uk-nav uk-dropdown-nav">
-            <li class="uk-active"><a href="#">Active</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-nav-header">Header</li>
-            <li><a href="#">Item</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-nav-divider"></li>
-            <li><a href="#">Item</a></li>
-        </ul>
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
         </div>
     </div>
 
     <div class="uk-inline">
         <button class="uk-button uk-button-default" type="button">Slide Left</button>
-        <div uk-dropdown="animation: slide-left; animate-out: true">
+        <div uk-dropdown="animation: slide-left; animate-out: true; duration: 700">
             <ul class="uk-nav uk-dropdown-nav">
-            <li class="uk-active"><a href="#">Active</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-nav-header">Header</li>
-            <li><a href="#">Item</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-nav-divider"></li>
-            <li><a href="#">Item</a></li>
-        </ul>
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
         </div>
     </div>
 
     <div class="uk-inline">
         <button class="uk-button uk-button-default" type="button">Reveal Left</button>
-        <div uk-dropdown="animation: reveal-left; animate-out: true">
+        <div uk-dropdown="animation: reveal-left; animate-out: true; duration: 700">
             <ul class="uk-nav uk-dropdown-nav">
-            <li class="uk-active"><a href="#">Active</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-nav-header">Header</li>
-            <li><a href="#">Item</a></li>
-            <li><a href="#">Item</a></li>
-            <li class="uk-nav-divider"></li>
-            <li><a href="#">Item</a></li>
-        </ul>
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
         </div>
     </div>
 
@@ -570,7 +570,7 @@ Any of these options can be applied to the component attribute. Separate multipl
 | `mode`          | click, hover          | click, hover        | Comma-separated list of dropdown trigger behavior modes.                                                     |
 | `delay-show`    | Number                | `0`                 | Delay time in hover mode before a dropdown is shown in ms.                                                   |
 | `delay-hide`    | Number                | `800`               | Delay time in hover mode before a dropdown is hidden in ms.                                                  |
-| `display`       | `dynamic`, `static`   | `dynamic`           | Disable dynamic positioning while scrolling by setting this option to `static`.                              |
+| `auto-update`   | Boolean               | `true`              | Disable dynamic positioning while scrolling by setting this option to `false`.                               |
 | `boundary`      | CSS selector          | `false`             | The area the dropdown can't exceed causing it to flip and shift. By default, the nearest scrolling ancestor. |
 | `target`        | Boolean, CSS selector | `false`             | The element the dropdown is positioned to (`true` for window).                                               |
 | `target-x`      | Boolean, CSS selector | `false`             | The element's X axis the dropdown is positioned to (`true` for window).                                      |
